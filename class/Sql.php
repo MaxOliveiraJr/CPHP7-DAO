@@ -5,23 +5,20 @@
 
 		public function __construct(){
 
-			$this->conn = new PDO("mysql:host=localhost;dbname=dbphp7","root","M@x!199761181003");
-
+			$this->conn = new PDO("mysql:host=localhost;dbname=dbphp7","root","root");
 		}
 
 		private function setParams($statment,$parameters =array()){
 
 			foreach($parameters as $key => $value){
 
-				$this->setParam($key,$value);
+				$this->setParam($statment,$key,$value);
 			}
-
 		}
 
 		private function setParam($statment,$key,$value){
 
 			$statment->bindParam($key,$value);
-
 		}
 
 		public function query($rawQuery, $params = array()){
@@ -34,7 +31,6 @@
 			$stmt->execute();
 			
 			return $stmt;
-
 		}
 
 		public function select ($rawQuery,$params=array()):array{
