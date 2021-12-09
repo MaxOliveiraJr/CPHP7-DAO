@@ -1,6 +1,7 @@
 <?php 
 
 	class Sql extends PDO{
+		
 		private  $conn;
 
 		public function __construct(){
@@ -22,7 +23,6 @@
 		}
 
 		public function query($rawQuery, $params = array()){
-
 
 			$stmt = $this->conn->prepare($rawQuery);
 
