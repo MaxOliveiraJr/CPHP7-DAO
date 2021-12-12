@@ -92,11 +92,15 @@ class Usuario{
 			$this->setDeslogin($row['deslogin']);
 			$this->setDessenha($row['dessenha']);
 			$this->setDtcadastro(new DateTime($row['dtcadastro']));
-			
+
 		}else{
 
 			throw new Exception("Login e/ou Senhar inválidos");
 		}
+	}
+
+	public function insert(){
+		$sql  = new Sql();
 	}
 
 	public function __toString(){
