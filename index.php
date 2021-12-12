@@ -26,9 +26,26 @@
 
 	// echo json_encode($search);
 
+	// $usuario = new Usuario();
+
+	// $usuario->login("Root","1234");
+
+	// echo $usuario;
+
+	// $aluno = new Usuario();
+
+	// // $aluno->setDeslogin('Aluno');
+	// // $aluno->setDessenha('2256');
+
+	// $aluno->insert();
+
+	// echo $aluno;
+
 	$usuario = new Usuario();
 
-	$usuario->login("Root","1234");
+	$usuario->loadById(7);
 
-	echo $usuario;
+	$usuario->update("Alun4os","1256");
+
+
 ?>
