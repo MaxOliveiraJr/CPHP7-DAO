@@ -17,9 +17,9 @@
 
 	//carrega uma lista de usuários
 
-	// $list = Usuario::getList();
+	$list = Usuario::getList();
 
-	// echo json_encode($list);
+	echo json_encode($list);
 
 
 	// $search = Usuario::search("jo");
@@ -41,11 +41,20 @@
 
 	// echo $aluno;
 
-	$usuario = new Usuario();
 
-	$usuario->loadById(7);
+	// Alterar Um usuario;
 
-	$usuario->update("Alun4os","1256");
+	// $usuario = new Usuario();
 
+	// $usuario->loadById(7);
 
+	// $usuario->update("Alun4os","1256");
+
+	// $usuario = new Usuario();
+
+	// $usuario->loadById(8);
+
+	// $usuario->delete();
+
+	// echo $usuario;
 ?>
